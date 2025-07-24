@@ -1,0 +1,28 @@
+name: TSLzone
+version: '1.0'
+main: org.tsl.tSLzone.TSLzone
+api-version: '1.21'
+folia-supported: true
+authors: [ Zvbj ]
+description: TSL服务器的区域伤害插件
+
+commands:
+  tslzone:
+    description: TSLzone主命令
+    usage: /tslzone <subcommand>
+    aliases: [tzone]
+    permission: tslzone.use
+  tzone:
+    description: TSLzone简写命令
+    usage: /tzone <subcommand>
+    permission: tslzone.use
+
+permissions:
+  tslzone.use:
+    description: 使用TSLzone插件的基本权限
+    default: op
+  tslzone.admin:
+    description: TSLzone管理员权限
+    default: op
+    children:
+      tslzone.use: true

@@ -1,0 +1,82 @@
+# TSLzone 插件消息配置文件
+# 支持颜色代码：&0-&9, &a-&f, &l(粗体), &o(斜体), &n(下划线), &m(删除线), &k(混淆), &r(重置)
+
+# 权限相关消息
+permission:
+  no-permission: "&c你没有权限使用此命令！"
+  no-admin-permission: "&c你没有权限执行此操作！"
+  console-only: "&c此命令只能在控制台执行！"
+  player-only: "&c此命令只能由玩家执行！"
+
+# 选点相关消息
+selection:
+  pos1-set: "&a已设置选点1: &7世界=%s, X=%.1f, Y=%.1f, Z=%.1f"
+  pos2-set: "&a已设置选点2: &7世界=%s, X=%.1f, Y=%.1f, Z=%.1f"
+  pos-incomplete: "&c请先设置选点1和选点2！"
+  different-world: "&c两个选点必须在同一个世界！"
+
+# 区域创建相关消息
+zone:
+  create:
+    success: "&a成功创建区域 &e'%s' &a！"
+    success-info: "&e伤害: &7%s &e| 频率: &7%s秒"
+    success-tip: "&e区域默认为关闭状态，使用 &a/tzone start %s &e来启动"
+    already-exists: "&c区域名称已存在！"
+    too-large: "&c区域太大！最大限制为500x500x500方块"
+    failed: "&c创建区域失败！请检查选点和参数"
+    invalid-damage: "&c伤害值必须大于0！"
+    invalid-frequency: "&c频率必须大于0！"
+    invalid-numbers: "&c伤害和频率必须是数字！"
+
+  start:
+    success: "&a已启动区域 &e'%s' &a！"
+    failed: "&c启动区域失败！区域可能不存在或已经在运行"
+    scheduler-error: "&c无法启动区域调度器，请检查服务器配置"
+
+  stop:
+    success: "&a已停止区域 &e'%s' &a！"
+    failed: "&c停止区域失败！区域可能不存在或已经停止"
+
+  remove:
+    success: "&a已删除区域 &e'%s' &a！"
+    failed: "&c删除区域失败！区域可能不存在"
+
+  list:
+    header: "&6=== TSLzone 区域列表 ==="
+    empty: "&e当前没有任何区域。"
+    entry-name: "&e区域: &f%s"
+    entry-positions: "&7  位置1: %s | 位置2: %s"
+    entry-settings: "&7  伤害: %s | 频率: %s秒"
+    entry-status: "&7  状态: %s"
+    status-active: "&a运行中"
+    status-inactive: "&c已停止"
+
+# 配置相关消息
+config:
+  reload-success: "&aTSLzone配置已重载！"
+  load-zones: "&a已加载 &e%d &a个区域"
+
+# 命令使用说明
+usage:
+  create: "&c用法: /tzone create <区域名称> <伤害> <频率>"
+  start: "&c用法: /tzone start <区域名称>"
+  stop: "&c用法: /tzone stop <区域名称>"
+  remove: "&c用法: /tzone remove <区域名称>"
+
+# 帮助菜单
+help:
+  header: "&6=== TSLzone 帮助 ==="
+  pos1: "&e/tzone pos1 &f- 设置选点1"
+  pos2: "&e/tzone pos2 &f- 设置选点2"
+  create: "&e/tzone create <名称> <伤害> <频率> &f- 创建区域"
+  start: "&e/tzone start <名称> &f- 启动区域"
+  stop: "&e/tzone stop <名称> &f- 停止区域"
+  remove: "&e/tzone remove <名称> &f- 删除区域"
+  list: "&e/tzone list &f- 列出所有区域"
+  reload: "&e/tzone reload &f- 重载配置"
+
+# 错误消息
+error:
+  damage-entity: "&c对实体造成伤害时出错: %s"
+  config-save: "&c无法保存配置文件: %s"
+  config-load: "&c加载区域配置时出错: %s"
